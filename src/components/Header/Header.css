@@ -1,0 +1,18 @@
+.main-title {
+  margin: 0;
+  text-align: center;
+}
+.link-new-dog {
+  text-decoration: none;
+  color: orange;
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+}
+
+.title-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+}

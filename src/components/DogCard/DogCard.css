@@ -1,0 +1,21 @@
+.image-container {
+  width: 100%;
+  height: 150px;
+}
+
+.dog {
+  padding: 0;
+  width: 100%;
+  align-self: center;
+}
+
+.dog__image {
+  height: 100%;
+  object-fit: cover;
+}
+
+.dog__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
