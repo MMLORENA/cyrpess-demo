@@ -6,3 +6,14 @@
   align-items: center;
   gap: 20px;
 }
+
+@media (min-width: 576px) {
+  .dog-card {
+    display: grid;
+    justify-content: center;
+    width: 100%;
+    grid-template-columns: 150px 150px 150px;
+    column-gap: 10px;
+    row-gap: 10px;
+  }
+}

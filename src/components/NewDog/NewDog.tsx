@@ -1,10 +1,12 @@
 import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import { useNavigate } from "react-router-dom";
 import useApi from "../../hooks/useApi";
 import { DogCredentials } from "../../redux/types";
 
 const NewDog = (): JSX.Element => {
+  const navigate = useNavigate();
   const { newDog } = useApi();
 
   const initialDogData: DogCredentials = {
@@ -25,6 +27,7 @@ const NewDog = (): JSX.Element => {
     event.preventDefault();
     newDog(dogData);
     setDogData(initialDogData);
+    navigate("/dogs");
   };
 
   const isFormValid =
@@ -33,7 +36,7 @@ const NewDog = (): JSX.Element => {
   return (
     <Form autoComplete="off" onSubmit={handleOnSubmit}>
       <Form.Group className="mb-3">
-        <Form.Label>Name</Form.Label>
+        <Form.Label htmlFor="name">Name</Form.Label>
         <Form.Control
           type="text"
           id="name"
@@ -44,7 +47,7 @@ const NewDog = (): JSX.Element => {
       </Form.Group>
 
       <Form.Group className="mb-3">
-        <Form.Label>Chip</Form.Label>
+        <Form.Label htmlFor="chip">Chip</Form.Label>
         <Form.Control
           type="text"
           id="chip"
@@ -55,7 +58,7 @@ const NewDog = (): JSX.Element => {
       </Form.Group>
 
       <Form.Group className="mb-3">
-        <Form.Label>Picture</Form.Label>
+        <Form.Label htmlFor="picture">Picture</Form.Label>
         <Form.Control
           type="text"
           id="picture"
